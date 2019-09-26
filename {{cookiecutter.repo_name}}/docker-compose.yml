@@ -1,8 +1,8 @@
 version: '2.3'
 services:
    jekyll-server:
-      image: jekyll_image:{{cookiecutter.username}}-{{cookiecutter.project_name}}
-      container_name: jekyll_container-{{cookiecutter.username}}-{{cookiecutter.project_name}}
+      image: jekyll_image:{{cookiecutter.username.lower().replace(' ', '_')}}-{{cookiecutter.project_name.lower().replace(' ', '_')}}
+      container_name: jekyll_container-{{cookiecutter.username.lower().replace(' ', '_')}}-{{cookiecutter.project_name.lower().replace(' ', '_')}}
       build: docker
       ports:
          - "0.0.0.0:8081:8888"
@@ -12,3 +12,6 @@ services:
       command: jekyll build
       stdin_open: true
       tty: true
+
+
+
