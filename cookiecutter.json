@@ -1,7 +1,8 @@
 {
 	"project_name": "Pages",
 	"repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
-    "name": "Author",
+	"username": "rodrigorivera",
+    "name": "Rodrigo Rivera",
 	"project_short_description": "A short description of the Jekyll pages project",
     "footer_message": "made by @rodrigorivera"
 }
