@@ -1,7 +1,7 @@
 {
 	"project_name": "Pages",
-	"repo_name": "pages",
-    "name": "Nathan Bergey",
-	"project_short_description": "Jekyll pages",
-    "footer_message": "made by @natronics in the fabulous hipster paradise of Portland, Ore."
+	"repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
+    "name": "Author",
+	"project_short_description": "A short description of the Jekyll pages project",
+    "footer_message": "made by @rodrigorivera"
 }

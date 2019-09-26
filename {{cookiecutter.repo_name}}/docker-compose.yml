@@ -1,0 +1,14 @@
+version: '2.3'
+services:
+   jekyll-server:
+      image: jekyll_image:{{cookiecutter.username}}-{{cookiecutter.project_name}}
+      container_name: jekyll_container-{{cookiecutter.username}}-{{cookiecutter.project_name}}
+      build: docker
+      ports:
+         - "0.0.0.0:8081:8888"
+      volumes:
+         - $PWD:/srv/jekyll
+      ipc: host
+      command: jekyll build
+      stdin_open: true
+      tty: true
