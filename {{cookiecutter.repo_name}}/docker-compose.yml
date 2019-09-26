@@ -3,13 +3,13 @@ services:
    jekyll-server:
       image: jekyll_image:{{cookiecutter.username.lower().replace(' ', '_')}}-{{cookiecutter.project_name.lower().replace(' ', '_')}}
       container_name: jekyll_container-{{cookiecutter.username.lower().replace(' ', '_')}}-{{cookiecutter.project_name.lower().replace(' ', '_')}}
-      build: docker
+      build: _docker
       ports:
-         - "0.0.0.0:8081:8888"
+         - "0.0.0.0:8081:4000"
       volumes:
          - $PWD:/srv/jekyll
       ipc: host
-      command: jekyll build
+      command: jekyll serve --watch --host 0.0.0.0 --port 8888
       stdin_open: true
       tty: true
 
